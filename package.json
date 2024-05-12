@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "jest ./tests",
-    "start": "tsx watch ./source/source.js"
+    "dev": "tsx watch ./source/source.ts",
+    "start": "node ./source/source.js"
   },
   "keywords": [],
   "author": "",

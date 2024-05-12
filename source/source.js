@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { ListGeoLocationsRoutes } from "../routes/geolocation/list_geolocations";
+import { ListGeoLocationsRoutes } from "../routes/geolocation/list_geolocations.js";
 export class App {
     async execute() {
         const app = express();

@@ -1,5 +1,5 @@
-import { ListGeolocations } from "../../entities/geolocation/list";
-import { ListAllGeolocationsRepositoryMock } from "../../mocks/geolocation/mock";
+import { ListGeolocations } from "../../entities/geolocation/list.js";
+import { ListAllGeolocationsRepositoryMock } from "../../mocks/geolocation/mock.js";
 export class ListGeolocationsController {
     async execute(req, res) {
         const { address } = req.params;

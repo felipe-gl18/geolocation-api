@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { ListGeolocationsController } from "../../controllers/geolocation/list_geolocation";
+import { ListGeolocationsController } from "../../controllers/geolocation/list_geolocation.js";
 export class ListGeoLocationsRoutes {
     constructor() {
         this.router = Router();
