@@ -1,14 +1,14 @@
 import { Router } from "express";
-import { ListGeolocationsController } from "../../controllers/geolocation/list_all";
-import { ListFilteredGeolocationsController } from "../../controllers/geolocation/list_filtered";
+import { FindStateControler } from "../../controllers/geolocation/find_state";
+import { FindCityController } from "../../controllers/geolocation/find_city";
 export class ListGeoLocationsRoutes { 
-    router? 
+    public router: Router; 
     constructor(){
         this.router = Router()
         this.route()
     }
     route(){
-        this.router.get("/all", new ListGeolocationsController().execute)
-        this.router.post("/find", new ListFilteredGeolocationsController().execute)
+        this.router.get("/states/:state", new FindStateControler().execute);
+        this.router.get("/cities/:city", new FindCityController().execute);
     }
 }

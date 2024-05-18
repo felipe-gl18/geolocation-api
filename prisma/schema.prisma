@@ -8,9 +8,11 @@ datasource db {
 }
 
 model locations {
-  id        Int       @id @default(autoincrement())
-  address   String?   @db.VarChar(250)
-  lat       String?   @db.VarChar(20)
-  long      String?   @db.VarChar(20)
-  createdat DateTime? @default(now()) @db.Timestamp(6)
+  id        Int       @id(map: "localization_pkey") @default(autoincrement())
+  address   String    @db.VarChar(220)
+  long      String    @db.VarChar(20)
+  lat       String    @db.VarChar(20)
+  createdat DateTime @default(now()) @db.Timestamp(6)
+  state     String   @db.VarChar
+  city      String   @db.VarChar
 }

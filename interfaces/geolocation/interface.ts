@@ -1,6 +1,8 @@
 export interface Geolocation{
     id: number,
-    full_address: string;
-    lat: number;
-    long: number;
+    address: string;
+    lat: string;
+    long: string;
+    state: string;
+    city: string;
 }
