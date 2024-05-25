@@ -59,11 +59,11 @@ var App = /** @class */ (function () {
                 app.get("/", function (req, res) {
                     res.status(200).json({
                         message: "Hello Dev, follow our routes",
-                        all: "Returns all locations values from our database!",
-                        find: "Its a POST route, that except any search value (Rua Mariinha Paiva, Belo Horizonte, Ceará), please insert just one value, whether it's a street, state, or city."
+                        "/states/:state": "Returns all locations that includes the state value",
+                        "/cities/:city": "Returns all locations that includes the city value"
                     });
                 });
-                app.listen(3000, function () {
+                app.listen(3001, function () {
                     console.log("The server is running");
                 });
                 return [2 /*return*/];
