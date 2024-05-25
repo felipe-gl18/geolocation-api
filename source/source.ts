@@ -18,7 +18,7 @@ export class App {
                 }
             )
         })
-        app.listen(3001, () => {
+        app.listen(3000, () => {
             console.log("The server is running");
         })
     }
